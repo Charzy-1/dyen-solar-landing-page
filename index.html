@@ -18,8 +18,17 @@
 
       <a href="#home" class="logo">
         <span class="logo-box">Z</span>
-        <span>Zitotech</span>
+        <span class="logo-name">Zitotech</span>
       </a>
+
+      <!-- My on/off switch with two states unchecked → menu closed and checked   → menu open -->
+      <input type="checkbox" id="nav-toggle" class="a11y-toggle">
+      
+      <label for="nav-toggle" class="hamburger" aria-label="Open menu"> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
       <div class="nav-link-container">
         <nav class="nav-links">
@@ -29,7 +38,7 @@
           <a href="services">Services</a>
         </nav>
 
-        <a href="#contact">
+        <a href="#contact" class="btn-action">
           Contact us
         </a>
       </div>
