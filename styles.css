@@ -1,0 +1,76 @@
+:root{  
+  /* -- palette: braised-short-rib editorial (wine / rust / parchment) -- */
+  --background-color:       #F5EFE2;  /* page background, warm parchment          */
+  --paper-deep:  #ECE1CB; 
+  --text-color:         #241523; 
+  --line:        rgba(36,28,21,0.14);
+  --wine:        #6e1e66;  /* primary accent — the braising liquid     */
+  --ink-soft:    #5C5245;  
+  --rust:        #B15522;  
+  --ink:         #8C56D4; /* note backgroud colour */
+    
+  /* -- type scale -- */
+  --font-display: "DM Serif Display", serif;
+  --font-body:    "Karla", sans-serif;
+
+  /* -- spacing scale (multiples of 4px keep things aligned) -- */
+  --space-1: 0.4rem;
+  --space-2: 0.8rem;
+  --space-3: 1.6rem;
+  --space-4: 2.4rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  --radius: 3px;
+  --max-w: 1180px;
+
+  /* set by JS as you scroll the steps list — see OBSERVER section */
+  --reduction: 0;
+}
+
+/* ============================================================
+   2. RESET — remove browser defaults so we start from zero.
+   ============================================================ */
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+}
+
+img{ 
+  max-width: 100%; display: block; 
+}
+
+ul, ol{ margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p{ margin: 0; }
+a{ color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1120px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+section { padding-block: var(--space-6); }
+
+/* NAVIGAITON STYLING */
+.nav-container{
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.nav-link-container {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
