@@ -51,9 +51,15 @@ h1, h2, h3, p{ margin: 0; }
 a{ color: inherit; text-decoration: none; }
 
 .container {
-  width: min(1120px, 100% - 3rem);
+   max-width: var(--max-w);
   margin-inline: auto;
-  padding: var(--space-2);
+  padding:  var(--space-2) var(--space-5);
+}
+
+.wrap{
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
 }
 
 /* section { padding-block: var(--space-6); } */
@@ -208,6 +214,8 @@ a{ color: inherit; text-decoration: none; }
   align-items: flex-end;
   overflow: hidden;
   background: linear-gradient(160deg, #15123b 0%, #1e2a6e 45%, #342aa3 100%);
+  
+  padding-inline: var(--space-3);
 }
 
 .hero-image {
@@ -228,7 +236,7 @@ a{ color: inherit; text-decoration: none; }
   position: relative;
   padding: var(--space-2) var(--space-4) var(--space-4);
   color: var(--background-color);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
 }
 
 .hero-content h1{
@@ -258,6 +266,39 @@ a{ color: inherit; text-decoration: none; }
   inset: 0;
   background: linear-gradient(-90deg, rgba(36,20,15,0.05) 0%, rgba(20,10,8,0.78) 65%);
 }
+
+.hero-card {
+  position: relative;
+  z-index: 3;
+  transform: translateY(-20%);
+  height: 350px;
+  background: rgb(222, 222, 224);
+  padding: var(--space-3);
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+  
+}
+
+.card {
+  background: white;
+  position: relative;
+}
+
+.inner-card {
+  position: absolute;
+  left: 50%;
+  top: -25px; /* lifts it above the card */
+  transform: translateX(-50%);
+  background-color: rgb(221, 207, 207);
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  border: 2px solid rgb(196, 173, 173);
+  border-radius: 50%;
+}
+
 
 
 
